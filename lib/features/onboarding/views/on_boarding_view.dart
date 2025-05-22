@@ -5,6 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:meals_app/core/constatnts.dart';
 import 'package:meals_app/core/styles/app_colors.dart';
 import 'package:meals_app/core/styles/fonts_style.dart';
+import 'package:meals_app/features/home/views/home_view.dart';
+import 'package:meals_app/features/service/on_boarding_service.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -17,6 +19,14 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   int currentIndex = 0;
   final CarouselSliderController _carouselController =
       CarouselSliderController();
+  void _finishOnboarding(BuildContext context) async {
+    await OnboardingService.setSeenOnboarding();
+    Navigator.pushReplacement(
+      // ignore: use_build_context_synchronously
+      context,
+      MaterialPageRoute(builder: (_) => const HomeView()),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +136,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                             borderRadius: BorderRadius.circular(48.r),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () => _finishOnboarding(context),
                         child: const Icon(Icons.arrow_forward_outlined),
                       ),
                 ],
