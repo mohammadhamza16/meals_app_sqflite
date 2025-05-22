@@ -57,7 +57,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                 children: [
                   SizedBox(height: 32),
                   CarouselSlider(
-                    items: Constatnts.onBoardingText,
+                    items: Constants.onBoardingText,
                     carouselController: _carouselController,
                     options: CarouselOptions(
                       initialPage: 0,
@@ -75,7 +75,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   ),
                   SizedBox(height: 16),
                   DotsIndicator(
-                    dotsCount: Constatnts.onBoardingText.length,
+                    dotsCount: Constants.onBoardingText.length,
                     position: currentIndex.toDouble(),
                     decorator: DotsDecorator(
                       activeColor: Colors.white,

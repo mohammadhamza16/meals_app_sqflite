@@ -1,6 +1,7 @@
 import 'package:meals_app/features/onboarding/widgets/on_boarding_text_widget.dart';
+import 'package:meals_app/model/meal_model.dart';
 
-class Constatnts {
+class Constants {
   static final List<OnBoardingText> onBoardingText = [
     OnBoardingText(
       onBoardingTitle: 'Save Your Meals Ingredients',
@@ -18,4 +19,5 @@ class Constatnts {
           'All the best restaurants and their top menus are ready for you',
     ),
   ];
+  static List<MealModel> mealsList = [];
 }
