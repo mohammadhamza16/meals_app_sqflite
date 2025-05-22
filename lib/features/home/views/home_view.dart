@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/core/constatnts.dart';
-import 'package:meals_app/core/widgets/app_banner.dart';
-import 'package:meals_app/core/widgets/meal_item.dart';
+import 'package:meals_app/features/home/widgets/app_banner.dart';
+import 'package:meals_app/features/home/widgets/meal_item.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
